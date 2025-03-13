@@ -1,0 +1,3 @@
+"""
+KaryaPath FastAPI Application
+""" 
