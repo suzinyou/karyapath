@@ -8,4 +8,21 @@ services:
     volumes:
       - .:/app
     environment:
-      - PYTHONPATH=/app 
+      - PYTHONPATH=/app
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/karyapath
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=karyapath
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data: 
