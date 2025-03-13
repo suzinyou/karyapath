@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "karyapath"
+version = "0.1.0"
+description = "A basic FastAPI application with a healthcheck endpoint"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "0.109.2"
+uvicorn = "0.27.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.0.0"
+httpx = "0.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
